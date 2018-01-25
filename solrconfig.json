@@ -1,0 +1,351 @@
+{
+    "protocol" : "https",
+    "maxrows": 10000,
+	"maxwaittime" : 60000,
+	"solrserver" : "hc1.esri.com",
+	"solrport" : 443,
+	"solrselect" : "/esri/twitter_shard1_replica1/select/",
+	"solrsearchfields" : "id,point,original-id,tweet,date-created,retweet-count,hashtag,mentions,in-reply-status,in-reply-user-id,in-reply-user-screen-name,link,place-country,place-country-code,place-full-name,place-id,place-name,place-street-address,place-type,place-url,user-description,user-id,user-location,user-name,user-screen-name,source,lang-primary,lang-others,country,user-friend-count,user-follower-count",
+	"solrdatefield" : "date-created",
+	"fcdatefield" : "DATE_CREATED",
+	"ptgeofield" : "point",
+	"textsearchfield" : "bucket",
+	"solrtextsearchfield" : "tweet",
+	"solrresponsetag" : "response",
+	"solrdocstag" : "docs",
+	"returnpointtype" : 0,
+	"maxfieldcount_for_defquery" : 6,
+	"keystore" : "soi.jks",
+	"keystorepassword" : "changeit",
+	"fc_fields" : "ID,ORIGINAL_ID,TWEET,DATE_CREATED,RETWEET_COUNT,HASHTAG,MENTIONS,IN_REPLY_STATUS,IN_REPLY_USER_ID,IN_REPLY_USER_SCREEN_NAME,LINK,PLACE_COUNTRY,PLACE_COUNTRY_CODE,PLACE_FULL_NAME,PLACE_ID,PLACE_NAME,PLACE_TYPE,PLACE_URL,USER_DESCRIPTION,USER_ID,USER_LOCATION,USER_NAME,USER_SCREEN_NAME,SOURCE,COUNTRY,USER_FRIEND_COUNT,USER_FOLLOWER_COUNT,POINT_X,POINT_Y,BUCKET,SHAPE@XY",
+	"fc_to_solr_field_mappings" : [
+			{"ID":"id"},
+			{"ORIGINAL_ID":"original-id"},
+			{"TWEET":"tweet"},
+			{"DATE_CREATED":"date-created"},
+			{"RETWEET_COUNT":"retweet-count"},
+			{"HASHTAG":"hashtag"},
+			{"MENTIONS":"mentions"},
+			{"IN_REPLY_STATUS":"in-reply-status"},
+			{"IN_REPLY_USER_ID":"in-reply-user-id"},
+			{"IN_REPLY_USER_SCREEN_NAME":"in-reply-user-screen-name"},
+			{"LINK":"link"},
+			{"PLACE_COUNTRY":"place-country"},
+			{"PLACE_COUNTRY_CODE":"place-country-code"},
+			{"PLACE_FULL_NAME":"place-full-name"},
+			{"PLACE_ID":"place-id"},
+			{"PLACE_NAME":"place-name"},
+			{"PLACE_TYPE":"place-type"},
+			{"PLACE_URL":"place-url"},
+			{"USER_DESCRIPTION":"user-description"},
+			{"USER_ID":"user-id"},
+			{"USER_LOCATION":"user-location"},
+			{"USER_NAME":"user-name"},
+			{"USER_SCREEN_NAME":"user-screen-name"},
+			{"SOURCE":"source"},
+			{"COUNTRY":"country"},
+			{"USER_FRIEND_COUNT":"user-friend-count"},
+			{"USER_FOLLOWER_COUNT":"user-follower-count"}
+	],
+	"fields": [
+		{
+			name: "objectid",
+			type: "esriFieldTypeOID",
+			alias: "OBJECTID",
+			domain: null,
+			editable: false,
+			nullable: false
+		},
+		{
+			name: "id",
+			type: "esriFieldTypeString",
+			alias: "ID",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 50
+		},
+		{
+			name: "original_id",
+			type: "esriFieldTypeString",
+			alias: "ORIGINAL_ID",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 100
+		},
+		{
+			name: "tweet",
+			type: "esriFieldTypeString",
+			alias: "TWEET",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 5000
+		},
+		{
+			name: "date_created",
+			type: "esriFieldTypeDate",
+			alias: "DATE_CREATED",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 36
+		},
+		{
+			name: "retweet_count",
+			type: "esriFieldTypeInteger",
+			alias: "RETWEET_COUNT",
+			domain: null,
+			editable: true,
+			nullable: true
+		},
+		{
+			name: "hashtag",
+			type: "esriFieldTypeString",
+			alias: "HASHTAG",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 2048
+		},
+		{
+			name: "mentions",
+			type: "esriFieldTypeString",
+			alias: "MENTIONS",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 2048
+		},
+		{
+			name: "in_reply_status",
+			type: "esriFieldTypeString",
+			alias: "IN_REPLY_STATUS",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 100
+		},
+		{
+			name: "in_reply_user_id",
+			type: "esriFieldTypeString",
+			alias: "IN_REPLY_USER_ID",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 100
+		},
+		{
+			name: "in_reply_user_screen_name",
+			type: "esriFieldTypeString",
+			alias: "IN_REPLY_USER_SCREEN_NAME",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 256
+		},
+		{
+			name: "link",
+			type: "esriFieldTypeString",
+			alias: "LINK",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 2048
+		},
+		{
+			name: "place_country",
+			type: "esriFieldTypeString",
+			alias: "PLACE_COUNTRY",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 100
+		},
+		{
+			name: "place_country_code",
+			type: "esriFieldTypeString",
+			alias: "PLACE_COUNTRY_CODE",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 100
+		},
+		{
+			name: "place_full_name",
+			type: "esriFieldTypeString",
+			alias: "PLACE_FULL_NAME",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 512
+		},
+		{
+			name: "place_id",
+			type: "esriFieldTypeString",
+			alias: "PLACE_ID",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 100
+		},
+		{
+			name: "place_name",
+			type: "esriFieldTypeString",
+			alias: "PLACE_NAME",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 1024
+		},
+		{
+			name: "place_street_address",
+			type: "esriFieldTypeString",
+			alias: "PLACE_STREET_ADDRESS",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 2048
+		},
+		{
+			name: "place_type",
+			type: "esriFieldTypeString",
+			alias: "PLACE_TYPE",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 100
+		},
+		{
+			name: "place_url",
+			type: "esriFieldTypeString",
+			alias: "PLACE_URL",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 2048
+		},
+		{
+			name: "user_description",
+			type: "esriFieldTypeString",
+			alias: "USER_DESCRIPTION",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 5000
+		},
+		{
+			name: "user_id",
+			type: "esriFieldTypeString",
+			alias: "USER_ID",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 100
+		},
+		{
+			name: "user_location",
+			type: "esriFieldTypeString",
+			alias: "USER_LOCATION",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 1024
+		},
+		{
+			name: "user_name",
+			type: "esriFieldTypeString",
+			alias: "USER_NAME",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 256
+		},
+		{
+			name: "user_screen_name",
+			type: "esriFieldTypeString",
+			alias: "USER_SCREEN_NAME",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 256
+		},
+		{
+			name: "source",
+			type: "esriFieldTypeString",
+			alias: "SOURCE",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 2048
+		},
+		{
+			name: "lang_primary",
+			type: "esriFieldTypeString",
+			alias: "LANG_PRIMARY",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 1024
+		},
+		{
+			name: "lang_others",
+			type: "esriFieldTypeString",
+			alias: "LANG_OTHERS",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 1024
+		},
+		{
+			name: "country",
+			type: "esriFieldTypeString",
+			alias: "COUNTRY",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 50
+		},
+		{
+			name: "user_friend_count",
+			type: "esriFieldTypeInteger",
+			alias: "USER_FRIEND_COUNT",
+			domain: null,
+			editable: true,
+			nullable: true
+		},
+		{
+			name: "user_follower_count",
+			type: "esriFieldTypeInteger",
+			alias: "USER_FOLLOWER_COUNT",
+			domain: null,
+			editable: true,
+			nullable: true
+		},
+		{
+			name: "point_x",
+			type: "esriFieldTypeDouble",
+			alias: "POINT_X",
+			domain: null,
+			editable: true,
+			nullable: true
+		},
+		{
+			name: "point_y",
+			type: "esriFieldTypeDouble",
+			alias: "POINT_Y",
+			domain: null,
+			editable: true,
+			nullable: true
+		},
+		{
+			name: "bucket",
+			type: "esriFieldTypeString",
+			alias: "BUCKET",
+			domain: null,
+			editable: true,
+			nullable: true,
+			length: 100
+		}]
+}
